@@ -1,0 +1,105 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #1e1e1e;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 97vh;
+    margin: 0;
+    flex-direction: column;
+    padding-top: 20px;
+    box-sizing: border-box;
+}
+
+h1 {
+    font-size: 25px;
+    color: white; 
+    text-align: left;
+    margin-top: 1px;
+    margin-bottom: 10px;
+    font-family: 'Verdana', sans-serif;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.calculator {
+    background-color: #000;
+    border-radius: 20px;
+    padding: 15px;
+    box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.2);
+    width: 360px;
+}
+
+.display input {
+    width: 95%;
+    height: 50px;
+    font-size: 20px;
+    text-align: right;
+    border: none;
+    outline: none;
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    border-radius: 20px;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 6px;
+    margin-top: 15px;
+}
+
+button {
+    height: 50px;
+    font-size: 16px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button.small-btn {
+    height: 40px;
+    font-size: 12px;
+    background-color: #444;
+    color: white;
+}
+
+button.shift-btn {
+    background-color: #fbc02d;
+    color: black;
+}
+
+button.alpha-btn {
+    background-color: #ff5722;
+    color: white;
+}
+
+button.drg-btn {
+    background-color: #009688;
+    color: white;
+}
+
+button.function-btn {
+    background-color: #ff5722;
+    color: white;
+}
+
+button.equals-btn {
+    background-color: #4caf50;
+    color: white;
+}
+
+button.operator-btn {
+    background-color: #3f51b5;
+    color: white;
+}
+
+button:hover {
+    opacity: 0.9;
+}
+
+button:not(.small-btn):not(.function-btn):not(.equals-btn):not(.operator-btn) {
+    background-color: #555;
+    color: white;
+}

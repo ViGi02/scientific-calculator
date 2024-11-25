@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ViGi's Scientific Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="calculator">
+		<h1>ViGi Calculator</h1>
+        <div class="display">
+            <input type="text" id="display" readonly>
+        </div>
+        <div class="buttons">
+            <!--1st Row-->
+            <button class="small-btn shift-btn">SHIFT</button>
+            <button class="small-btn alpha-btn">ALPHA</button>
+            <button class="small-btn" onclick="appendCharacter('|')">|x|</button>
+            <button class="small-btn" onclick="appendCharacter('^(-1)')">x⁻¹</button>
+            <button class="small-btn drg-btn">DRG</button>
+            <!--2nd Row-->
+            <button class="small-btn" onclick="appendCharacter('^')">xʸ</button>
+            <button class="small-btn" onclick="appendCharacter('√(')">√</button>
+            <button class="small-btn" onclick="appendCharacter('^2')">x²</button>
+            <button class="small-btn" onclick="appendCharacter('log(')">log</button>
+            <button class="small-btn" onclick="appendCharacter('ln(')">ln</button>
+            <!--3rd Row-->
+            <button class="small-btn" onclick="appendCharacter('-')">(-)</button>
+            <button class="small-btn" onclick="appendCharacter(',')">,</button>
+            <button class="small-btn" onclick="appendCharacter('tan(')">tan</button>
+            <button class="small-btn" onclick="appendCharacter('sin(')">sin</button>
+            <button class="small-btn" onclick="appendCharacter('cos(')">cos</button>
+            <!--4th Row-->
+            <button class="small-btn" onclick="appendCharacter('π')">π</button>
+            <button class="small-btn">ENG</button>
+            <button class="small-btn" onclick="appendCharacter('(')">(</button>
+            <button class="small-btn" onclick="appendCharacter(')')">)</button>
+            <button class="small-btn">S⇔D</button>
+            <!--5th Row-->
+            <button onclick="appendCharacter('7')">7</button>
+            <button onclick="appendCharacter('8')">8</button>
+            <button onclick="appendCharacter('9')">9</button>
+            <button class="operator-btn" onclick="appendCharacter('/')">÷</button>
+            <button onclick="clearDisplay()" class="function-btn">AC</button>
+            <!--6th Row-->
+            <button onclick="appendCharacter('4')">4</button>
+            <button onclick="appendCharacter('5')">5</button>
+            <button onclick="appendCharacter('6')">6</button>
+            <button class="operator-btn" onclick="appendCharacter('*')">×</button>
+            <button onclick="deleteLast()">DEL</button>
+            <!--7th Row-->
+            <button onclick="appendCharacter('1')">1</button>
+            <button onclick="appendCharacter('2')">2</button>
+            <button onclick="appendCharacter('3')">3</button>
+            <button class="operator-btn" onclick="appendCharacter('+')">+</button>
+            <button class="operator-btn" onclick="appendCharacter('-')">−</button>
+            <!--8th Row-->
+            <button onclick="appendCharacter('0')">0</button>
+            <button onclick="appendCharacter('.')">.</button>
+            <button onclick="appendCharacter('*10^')">×10ˣ</button>
+            <button onclick="appendCharacter('Ans')">Ans</button>
+            <button onclick="calculate()" class="equals-btn">=</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
