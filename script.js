@@ -75,6 +75,7 @@ function evaluateExpression(expression) {
         '"use strict"; return (' +
         expression
             .replace(/π/g, Math.PI)
+            .replace(/e/g, Math.E)
             .replace(/sin\(/g, 'Math.sin(')
             .replace(/cos\(/g, 'Math.cos(')
             .replace(/tan\(/g, 'Math.tan(')
